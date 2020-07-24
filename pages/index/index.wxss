@@ -1,0 +1,152 @@
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  background: #fff;
+  width: 100%;
+}
+.toggle{
+  width: 80rpx;
+  height: 80rpx;
+  display: grid;
+  place-content: center;
+  margin: 0 20rpx;
+  padding: 5rpx;
+  border-radius: 20rpx;
+}
+
+.toggle image{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.userinfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  font-size: 20rpx;
+}
+.myclass{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.myclass .head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 20rpx 0;
+}
+.myclass .all,.myclass .add{
+  margin:  0 20rpx;
+  font-size: 30rpx;
+}
+.myclass .all{
+  color: #1296db;
+  font-weight: 700;
+  font-size: 32rpx;
+  margin: 0 40rpx;
+}
+.myclass .add{
+  color: #1296db;
+  background: #eee;
+  padding: 12rpx;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.add .icon{
+  width:50rpx;
+  height: 50rpx;
+  float: left;
+}
+
+.myclass .list{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%; 
+  margin: 0 80rpx;
+ background: #efefef;
+}
+.myclass .list .item{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 90%;
+  background: #fff;
+  height: 250rpx;
+  margin-top: 20rpx;
+  border-radius: 28rpx;
+  padding: 20rpx ;
+}
+.item .cname{
+  font-size: 35rpx;
+  color: #ccc;
+  margin: 15rpx 0;
+}
+.item .cinfos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.item .cinfos .left{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+} 
+.item .cinfos .left .info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 45rpx;
+  margin: 15rpx 0;
+}
+.item .cinfos .left .info .banji{
+  
+}
+.item .cinfos .left .info .teacher{
+  color: #ccc;
+  font-size: 42rpx;
+}
+.item .cinfos .left .startTime{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 35rpx;
+  color: #ccc;
+}
+.item .cinfos .right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.item .cinfos .right .status{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1296db;
+  font-weight: 600;
+  font-size: 40rpx;
+  margin-right:10rpx ;
+}       
+.item .cinfos .right .in{
+  color: #ccc;
+}

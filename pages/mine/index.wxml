@@ -1,0 +1,12 @@
+<!--pages/mine/index.wxml-->
+<block wx:if="{{hasUserInfo}}">
+	欢迎你，{{userInfo.nickName}}同学
+</block>
+
+<block wx:else>
+	<view class="noLogin">
+		<icon  type="warn" size="50"></icon>
+		<view class="text">未登录,请先登录！</view>
+    <button class="goLogin" type="primary" bindtap="go">去登录</button>
+	</view>
+</block>

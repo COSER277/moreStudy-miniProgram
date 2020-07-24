@@ -1,0 +1,10 @@
+<!--pages/Login/index.wxml-->
+<view class="warpper">
+	<view class="option">
+		<button type="primary" wx:if="{{!hasUserInfo }}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信授权 </button>
+	</view>
+
+  <view class="option">
+		<button type="primary" wx:if="{{!hasUserInfo }}" bindtap="login" > 账号登陆 </button>
+	</view>
+</view>

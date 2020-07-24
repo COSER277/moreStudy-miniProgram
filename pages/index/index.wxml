@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="userinfo">
+		<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="primary" class="center"> 登录 </button>
+		<block wx:else>
+			<view class="toggle">
+				<image class="icon" src="/assets/icons/viewlist.png"></image>
+			</view>
+			<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+		</block>
+	</view>
+	<view class="myclass"  wx:if="{{hasUserInfo && canIUse}}">
+		<view class="head">
+			<view class="all">全部课堂</view>
+			<view class="add">
+				<image class="icon" src="/assets/icons/add.png"></image>添加
+			</view>
+		</view>
+		<view class="list">
+			<navigator class="item" url="/pages/class/index?cid={{item.cid}}" wx:for="{{list}}" wx:for-item="item" wx:key="index">
+				<view>
+					<view class="cname">{{item.name}}</view>
+					<view class="cinfos">
+						<view class="left">
+							<view class="info">
+								<view class="banji">{{item.banji}}</view>
+								<view class="teacher">{{item.teacher}}</view>
+							</view>
+							<view class="startTime">上课时间:{{item.startTime}}</view>
+						</view>
+						<view class="right">
+							<view class="status">{{item.status}}</view>
+							<view class="in">></view>
+						</view>
+					</view>
+				</view>
+			</navigator>
+		</view>
+	</view>
+</view>
