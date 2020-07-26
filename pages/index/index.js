@@ -6,6 +6,11 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
+<<<<<<< HEAD
+=======
+    hiddenmodaInput: true, //添加课堂码 t为隐藏 f为显示
+    classCode:"",
+>>>>>>> 032c115... 2
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     list: [{
       cid: "sadada",
@@ -64,5 +69,55 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true,
     })
+<<<<<<< HEAD
   }
+=======
+  },
+  avatarTap: function (e) {
+    var that=this
+    wx.showActionSheet({
+      itemList: ["个人中心", "退出"],
+      success (res) {
+        if(res.tapIndex==1){
+        app.globalData.userInfo = {}
+        that.setData({
+          userInfo:{},
+          hasUserInfo: false,
+        })
+        wx.showToast({
+          title: '退出成功',
+          duration: 1000
+        })
+        }
+      },
+      fail (res) {
+        console.log(res.errMsg)
+      }
+    })
+    
+  },
+  addClass: function () {
+    this.setData({
+      hiddenmodaInput: false
+    })
+  },
+  updateValue:function(e){
+    this.setData({
+      classCode:e.detail.value
+    })
+    console.log(this.data.classCode)
+  },
+  //取消添加
+  cancel:function(){
+    this.setData({
+      hiddenmodaInput: true
+    })
+  },
+  //人确认添加课堂码
+  confirm: function () {
+    this.setData({
+      hiddenmodaInput: true
+    })
+  } 
+>>>>>>> 032c115... 2
 })

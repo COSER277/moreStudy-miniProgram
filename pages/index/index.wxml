@@ -6,6 +6,7 @@
 			<view class="toggle">
 				<image class="icon" src="/assets/icons/viewlist.png"></image>
 			</view>
+<<<<<<< HEAD
 			<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
 		</block>
 	</view>
@@ -13,6 +14,15 @@
 		<view class="head">
 			<view class="all">全部课堂</view>
 			<view class="add">
+=======
+			<image bindtap="avatarTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+		</block>
+	</view>
+	<view class="myclass" wx:if="{{hasUserInfo && canIUse}}">
+		<view class="head">
+			<view class="all">全部课堂</view>
+			<view class="add" bindtap="addClass">
+>>>>>>> 032c115... 2
 				<image class="icon" src="/assets/icons/add.png"></image>添加
 			</view>
 		</view>
@@ -37,4 +47,12 @@
 			</navigator>
 		</view>
 	</view>
+<<<<<<< HEAD
+=======
+
+	<modal hidden="{{hiddenmodaInput}}" title="请输入课程码" confirm-text="确认" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+		<input placeholder="请输入课程码" auto-focus bindinput="updateValue" data-name='code' ></input>
+	</modal>
+
+>>>>>>> 032c115... 2
 </view>

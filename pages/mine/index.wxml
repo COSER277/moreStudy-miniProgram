@@ -1,5 +1,9 @@
 <!--pages/mine/index.wxml-->
+<<<<<<< HEAD
 <block wx:if="{{hasUserInfo}}">
+=======
+<block wx:if="{{userInfo && hasUserInfo}}">
+>>>>>>> 032c115... 2
 	欢迎你，{{userInfo.nickName}}同学
 </block>
 
